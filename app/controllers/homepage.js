@@ -1,4 +1,5 @@
 import Ember from 'ember';
+var fsp = require('fs-promise');
 
 
 export default Ember.Controller.extend({
@@ -16,6 +17,9 @@ export default Ember.Controller.extend({
         console.log(members);
         console.log(notOfficerAlts);
         console.log(notRaiderAlts);
+
+        fsp.writeFileSync('../../memberinfo/memberinfo.js', notRaiderAlts, 'utf8');
+        
       });
     }
   }
