@@ -14,7 +14,11 @@ export default Ember.Route.extend({
       return { raidersNoAltsIncluded };
     });
     
+    let liveStreams = await this.get('twitchStreams').getOnlineStreamers().then(() => {
+
+    });
     return { memberData };
+
     
   }
 });
