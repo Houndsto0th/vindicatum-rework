@@ -1,0 +1,14 @@
+<!-- Mini Posts -->
+          <section>
+            <div class="mini-posts">
+              {{#each model.memberData.raidersNoAltsIncluded as |member|}}
+              <a href="#" class="author class">
+                <img src="class-icons/{{member.character.class}}.png" alt="">
+                <span class="name">{{member.character.name}}</span>
+              </a>
+                {{log member}}
+                
+              {{/each}}
+                      
+            </div>
+          </section>
