@@ -1,2 +1,167 @@
-<button {{action 'fetchMembers'}}></button>
-{{outlet}}
+<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="#">Vindicatum</a></h1>
+				
+        <nav class="links">
+					<ul>
+            <li><a href="#">Logs</a></li>
+						<li><a href="#">Forums</a></li>
+            <li><a href="#">Apply</a></li>
+						<li class="recruiting">
+              <a href="#" class="author class" >Currently Recruiting:
+                <img src="class-icons/1.png" alt="">
+                <img src="class-icons/2.png" alt="">
+                <img src="class-icons/3.png" alt="">
+              </a>
+            </li>
+          </ul>
+				</nav>
+				<nav class="main">
+					<ul>
+						<li class="search">
+							<a class="fa-search" href="#search">Search</a>
+							<form id="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</li>
+						<li class="menu">
+							<a class="fa-bars" href="#menu">Menu</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<section id="menu">
+
+				<!-- Search -->
+					<section>
+						<form class="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</section>
+
+				<!-- Links -->
+					<section>
+						<ul class="links">
+							<li>
+								<a href="#">
+									<h3>Lorem ipsum</h3>
+									<p>Feugiat tempus veroeros dolor</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>Dolor sit amet</h3>
+									<p>Sed vitae justo condimentum</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>Feugiat veroeros</h3>
+									<p>Phasellus sed ultricies mi congue</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>Etiam sed consequat</h3>
+									<p>Porta lectus amet ultricies</p>
+								</a>
+							</li>
+						</ul>
+					</section>
+
+				<!-- Actions -->
+					<section>
+						<ul class="actions vertical">
+							<li><a href="#" class="button big fit">Log In</a></li>
+						</ul>
+					</section>
+
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Post -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">Magna sed adipiscing</a></h2>
+								<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2015-11-01">November 1, 2015</time>
+								<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button big">Continue Reading</a></li>
+							</ul>
+							<ul class="stats">
+								<li><a href="#">General</a></li>
+								<li><a href="#" class="icon fa-heart">28</a></li>
+								<li><a href="#" class="icon fa-comment">128</a></li>
+							</ul>
+						</footer>
+					</article>
+
+
+				
+
+			</div>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+
+				<!-- Intro -->
+					<section id="intro">
+						<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+						<header>
+							<h2>Vindicatum</h2>
+							<p>Premier Raiding Guild</p>
+              <p>Malycrown • 3 Day</p>
+						</header>
+					</section>
+
+				<!-- Mini Posts -->
+					<section>
+						<div class="mini-posts">
+              {{#each model.memberData.raidersNoAltsIncluded as |member|}}
+              <a href="#" class="author class">
+                <img src="class-icons/{{member.character.class}}.png" alt="">
+                <span class="name">{{member.character.name}}</span>
+              </a>
+                {{log member}}
+                
+              {{/each}}
+						          
+						</div>
+					</section>
+
+				<!-- About -->
+					<section class="blurb">
+						<h2>About</h2>
+						<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+            <p class="copyright">Constructed and Maintiained by:</p>
+            <p class="copyright">Houndstooth & Rocklee</p>
+              <br>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</section>
+
+	</div>
