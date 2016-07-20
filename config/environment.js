@@ -15,7 +15,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'self'",
       // 'font-src': "'self' https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-      //'connect-src': "'self' https://us.api.battle.net/wow/guild/Icecrown/Vindicatum?fields=members&locale=en_US&apikey=3p9tvxvt5dfk9t47cq4hub9vk6jt2g25", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'connect-src': "'self' https://us.api.battle.net", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
       // 'img-src': "'self' 'unsafe-inline' http://www.google-analytics.com",
       // 'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com/", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
       // 'media-src': "'self'",

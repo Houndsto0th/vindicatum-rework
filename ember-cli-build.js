@@ -4,6 +4,10 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    'babel': {
+      comments: false,
+      includePolyfill: true
+    },
   });
 
   app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
