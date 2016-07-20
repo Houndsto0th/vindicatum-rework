@@ -1,5 +1,4 @@
 import Ember from 'ember';
-var fsp = require('fs-promise');
 
 
 export default Ember.Controller.extend({
@@ -13,13 +12,8 @@ export default Ember.Controller.extend({
         let members = allMembers.filter( member => member.rank < 6);
         let notOfficerAlts = members.filter( member => member.rank !== 2);
         let notRaiderAlts = notOfficerAlts.filter( member => member.rank !== 4);
-
-        console.log(members);
-        console.log(notOfficerAlts);
         console.log(notRaiderAlts);
 
-        fsp.writeFileSync('../../memberinfo/memberinfo.js', notRaiderAlts, 'utf8');
-        
       });
     }
   }
