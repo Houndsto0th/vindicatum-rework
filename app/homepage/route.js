@@ -3,8 +3,12 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   vindicatumMembers: Ember.inject.service(),
+  liveStreams: Ember.inject.service(),
   
  async model() {
+   let activeStreams = await this.get('livestreams').getOnlineStreamers().then((response) => {
+      
+   });
     let memberData = await this.get('vindicatumMembers').getVindiMembers().then((response) => {
       let allMembers = response.members;
       let members = allMembers.filter( member => member.rank < 6);
@@ -14,7 +18,7 @@ export default Ember.Route.extend({
       return { raidersNoAltsIncluded };
     });
     
-    return { memberData };
+    return { memberData, activeStreams };
 
     
   }
