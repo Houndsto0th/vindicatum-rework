@@ -14,6 +14,9 @@ export default Ember.Route.extend({
       return { raidersNoAltsIncluded };
     });
     
+    let activeStreams = await this.get('livestreams').getOnlineStreamers().then((response) => {
+      
+    })
     return { memberData };
 
     
