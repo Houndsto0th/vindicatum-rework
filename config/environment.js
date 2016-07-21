@@ -14,8 +14,8 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'self'",
-      // 'font-src': "'self' https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-      'connect-src': "'self' https://us.api.battle.net", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'connect-src': "'self' https://us.api.battle.net https://api.twitch.tv/kraken/streams/", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
       // 'img-src': "'self' 'unsafe-inline' http://www.google-analytics.com",
       // 'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com/", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
       // 'media-src': "'self'",
