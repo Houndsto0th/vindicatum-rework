@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   
  async model() {
     let activeStreams = await this.get('liveStreams').getOnlineStreamers();
-    console.log(activeStreams);
+    
     let memberData = await this.get('vindicatumMembers').getVindiMembers().then((response) => {
       let allMembers = response.members;
       let members = allMembers.filter( member => member.rank < 6);
