@@ -9,9 +9,13 @@
             <li><a href="#">Apply</a></li>
             <li class="recruiting">
               <a href="#" class="author class" >Currently Streaming:
-                <img src="class-icons/1.png" alt="">
-                <img src="class-icons/2.png" alt="">
-                <img src="class-icons/3.png" alt="">
+              
+              {{#each activeStreams as |stream|}}
+                {{log stream.stream}}
+               <a href="{{stream.stream.channel.url}}">
+                <img src="class-icons/{{stream.class}}.png" alt="">
+              </a>
+              {{/each}}
               </a>
             </li>
           </ul>
