@@ -4,10 +4,11 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   vindicatumMembers: Ember.inject.service(),
   liveStreams: Ember.inject.service(),
+  homepageBlog: Ember.inject.service(),
 
  async model() {
     let guildStreamers = [{streamKey:'tanned_priest', classId: 5},
-                          {streamKey:'houndsto0th_' classId: 6},
+                          {streamKey:'houndsto0th_', classId: 6},
                           {streamKey:'facial_sh0tzz', classID: 3},
                           {streamKey:'draakken', classId: 11},
                           {streamKey:'cedx10', classId: 5},
@@ -26,6 +27,10 @@ export default Ember.Route.extend({
 
     }
 
+    let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum().then((response) => {
+      console.log(response);
+    });
+
     let memberData = await this.get('vindicatumMembers').getVindiMembers().then((response) => {
       let allMembers = response.members;
       let members = allMembers.filter( member => member.rank < 6);
@@ -36,7 +41,7 @@ export default Ember.Route.extend({
     });
 
 
-    return { memberData, activeStreams };
+    return { memberData, activeStreams, imgurAlbum };
 
 
   }
