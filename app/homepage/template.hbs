@@ -3,7 +3,7 @@
 
 		<!-- Header -->
 			{{nav-bar activeStreams=model.activeStreams}}
-			
+
 		<!-- Menu -->
 			<section id="menu">
 
@@ -55,10 +55,12 @@
 
 		<!-- Main -->
 			<div id="main">
-
+				{{log model.imgurAlbum}}
 				<!-- Post -->
-					{{blog-posts}}
-
+				{{#each model.imgurAlbum.data.images as |killshot|}}
+					{{log killshot}}
+					{{blog-posts killPost=killshot}}
+				{{/each}}
 			</div>
 
 		<!-- Sidebar -->

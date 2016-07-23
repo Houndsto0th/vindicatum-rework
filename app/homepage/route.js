@@ -27,9 +27,7 @@ export default Ember.Route.extend({
 
     }
 
-    let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum().then((response) => {
-      console.log(response);
-    });
+    let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum();
 
     let memberData = await this.get('vindicatumMembers').getVindiMembers().then((response) => {
       let allMembers = response.members;
