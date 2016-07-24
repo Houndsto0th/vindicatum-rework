@@ -12,7 +12,8 @@ export default Ember.Route.extend({
                           {streamKey:'facial_sh0tzz', classID: 3},
                           {streamKey:'draakken', classId: 11},
                           {streamKey:'cedx10', classId: 5},
-                          {streamKey:'mypantaloonz', classId: 12}];
+                          {streamKey:'mypantaloonz', classId: 12},
+                          {streamKey:'biometrics1', classId: 3}];
     let activeStreams = [];
 
     for (let streamer of guildStreamers) {
