@@ -7,22 +7,13 @@
             <li><a href="https://www.warcraftlogs.com/guilds/395">Logs</a></li>
             <li><a href="http://forums.vindicatum.com/index.php">Forums</a></li>
             <li><a href="/about">About and Apply</a></li>
-            <li class="recruiting">
-              <a href="#" class="author class" >Currently Streaming:
-                <img src="class-icons/1.png" alt="">
-                <span>Tanned     </span>
-                <img src="class-icons/2.png" alt="">
-                <span>Tanned     </span>
-                <img src="class-icons/3.png" alt="">
-                <span>Tanned     </span>
-                <img src="class-icons/4.png" alt="">
-                <span>Tanned     </span>
+            <li class="streaming">
+              <h1>Currently Streaming:</h1>
               {{#each activeStreams as |stream|}}
                <a href="{{stream.stream.channel.url}}">
                 <img src="class-icons/{{stream.class}}.png" alt="">
               </a>
               {{/each}}
-              </a>
             </li>
           </ul>
         </nav>

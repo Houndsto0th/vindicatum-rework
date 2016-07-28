@@ -13,7 +13,8 @@ export default Ember.Route.extend({
                           {streamKey:'draakken', classId: 11},
                           {streamKey:'cedx10', classId: 5},
                           {streamKey:'mypantaloonz', classId: 12},
-                          {streamKey:'biometrics1', classId: 3}];
+                          {streamKey:'biometrics1', classId: 3},
+                          {streamKey:'naguura', classId: 11}];
     let activeStreams = [];
 
     for (let streamer of guildStreamers) {
@@ -30,17 +31,8 @@ export default Ember.Route.extend({
 
     let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum();
 
-    let memberData = await this.get('vindicatumMembers').getVindiMembers().then((response) => {
-      let allMembers = response.members;
-      let members = allMembers.filter( member => member.rank < 6);
-      let raidersNoOfficerAltsIncluded = members.filter( member => member.rank !== 2);
-      let raidersNoAltsIncluded = raidersNoOfficerAltsIncluded.filter( member => member.rank !== 4);
 
-      return { raidersNoAltsIncluded };
-    });
-
-
-    return { memberData, activeStreams, imgurAlbum };
+    return { activeStreams, imgurAlbum };
 
 
   }
