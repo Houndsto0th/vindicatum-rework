@@ -14,13 +14,12 @@
       <h1> Currently Streaming </h1>
       <div class="mini-posts">
         <li class="recruiting">
-          <a href="#" class="author class" >Currently Streaming:
           {{#each activeStreams as |stream|}}
-           <a href="{{stream.stream.channel.url}}">
-            <img src="class-icons/{{stream.class}}.png" alt="">
-          </a>
+            <a href="#" class="author class">
+              <img src="class-icons/{{stream.class}}.png" alt="">
+              <a href="{{stream.stream.channel.url}}"> <span class="name">{{stream.playerName}}</span></a>
+            </a>
           {{/each}}
-          </a>
         </li>
       </div>
     </section>

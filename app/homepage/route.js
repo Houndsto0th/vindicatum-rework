@@ -7,19 +7,19 @@ export default Ember.Route.extend({
   homepageBlog: Ember.inject.service(),
 
  async model() {
-    let guildStreamers = [{streamKey:'tanned_priest', classId: 5},
-                          {streamKey:'houndsto0th_', classId: 6},
-                          {streamKey:'facial_sh0tzz', classID: 3},
-                          {streamKey:'draakken', classId: 11},
-                          {streamKey:'cedx10', classId: 5},
-                          {streamKey:'mypantaloonz', classId: 12},
-                          {streamKey:'biometrics1', classId: 3},
-                          {streamKey:'naguura', classId: 11}];
+    let guildStreamers = [{streamKey:'tanned_priest', classId: 5, playerName: 'Tanned'},
+                          {streamKey:'houndsto0th_', classId: 6, playerName: 'Houndstooth'},
+                          {streamKey:'facial_sh0tzz', classID: 3, playerName: 'Orionid'},
+                          {streamKey:'draakken', classId: 11, playerName: 'Draakken'},
+                          {streamKey:'cedx10', classId: 5, playerName: 'Renray'},
+                          {streamKey:'mypantaloonz', classId: 12, playerName: 'Pudders'},
+                          {streamKey:'biometrics1', classId: 3, playerName: 'Zyb'},];
     let activeStreams = [];
 
     for (let streamer of guildStreamers) {
       let channel = await this.get('liveStreams').getOnlineStreamers(streamer.streamKey).then((response) => {
         response.class = streamer.classId;
+        response.playerName = streamer.playerName;
 
         if (response.stream !== null) {
           activeStreams.push(response);
