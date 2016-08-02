@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('homepage');
+  this.route('homepage', { path: '/' });
   this.route('about');
 });
 
