@@ -1,1 +1,24 @@
-{{outlet}}
+{{#side-menu side="right" width="40%"}}
+  <header class="navbar navbar-default">
+    <div class="navbar-header">
+    ...
+    </div>
+  </header>
+  <ul class="nav list-unstyled">
+    <br><br>
+    <li><a href="/"><h3>Homepage</h3></a></li>
+    <li><a href="https://www.warcraftlogs.com/guilds/395"><h3>Logs</h3></a></li>
+    <li><a href="http://forums.vindicatum.com/index.php"><h3>Forums</h3></a></li>
+    <li><a href="/about"><h3>About and Apply</h3></a></li>
+  </ul>
+{{/side-menu}}
+{{content-backdrop}}
+<div class="page-content">
+ 
+  <main>
+    <div class="container">
+      {{outlet}}
+    </div>
+  </main>
+ 
+</div>

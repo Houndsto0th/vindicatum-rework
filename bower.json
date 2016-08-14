@@ -12,10 +12,11 @@
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
     "bootstrap": "~3.3.6",
-    "ember-addons.bs_for_ember": "~0.7.0"
+    "ember-addons.bs_for_ember": "~0.7.0",
+    "font-awesome": "~4.5.0"
   },
   "resolutions": {
-        "ember": "2.3.1",
-        "mocha": "2.4.5"
-    }
+    "ember": "2.3.1",
+    "mocha": "2.4.5"
+  }
 }

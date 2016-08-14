@@ -8,6 +8,9 @@ module.exports = function(defaults) {
       comments: false,
       includePolyfill: true
     },
+    'ember-font-awesome': {
+      useScss: true, // for ember-cli-sass
+    }
   });
 
   app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');

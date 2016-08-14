@@ -55,10 +55,8 @@
 
 		<!-- Main -->
 			<div id="main">
-				{{log model.imgurAlbum}}
 				<!-- Post -->
 				{{#each model.imgurAlbum.data.images as |killshot|}}
-					{{log killshot}}
 					{{blog-posts killPost=killshot}}
 				{{/each}}
 			</div>

@@ -1,25 +1,19 @@
 <!-- Header -->
-      <header id="header">
-        <h1><a href="/">Vindicatum</a></h1>
+<header id="header">
+  <h1><a href="/">Vindicatum</a></h1>
 
-        <nav class="links">
-          <ul>
-            <li><a href="https://www.warcraftlogs.com/guilds/395">Logs</a></li>
-            <li><a href="http://forums.vindicatum.com/index.php">Forums</a></li>
-            <li><a href="/about">About and Apply</a></li>
-          </ul>
-        </nav>
-        <nav class="main">
-          <ul>
-            <li class="search">
-              <a class="fa-search" href="#search">Search</a>
-              <form id="search" method="get" action="#">
-                <input type="text" name="query" placeholder="Search" />
-              </form>
-            </li>
-            <li class="menu">
-              <a class="fa-bars" href="#menu">Menu</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <nav class="links">
+    <ul>
+      <li><a href="https://www.warcraftlogs.com/guilds/395">Logs</a></li>
+      <li><a href="http://forums.vindicatum.com/index.php">Forums</a></li>
+      <li><a href="/about">About and Apply</a></li>
+    </ul>
+  </nav>
+  <nav class="main">
+    <ul>
+      <li class="menu">
+          <a {{action 'openSideMenu'}} class="fa-bars">{{fa-icon 'bars'}}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

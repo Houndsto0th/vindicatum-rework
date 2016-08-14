@@ -14,7 +14,6 @@
       <h1> Roster </h1>
       <div class="mini-posts">
         {{#each memberData.raidersNoAltsIncluded as |member|}}
-        {{log member}}
         <a href="http://us.battle.net/wow/en/character/{{member.character.realm}}/{{member.character.name}}/simple" target="_blank" class="author class">
           <img src="class-icons/{{member.character.class}}.png" alt="">
           <span class="name">{{member.character.name}}</span>
