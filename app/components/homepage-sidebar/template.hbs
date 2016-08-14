@@ -1,7 +1,7 @@
 <section id="sidebar">
   <!-- Intro -->
     <section id="intro">
-      <a href="#" class="logo"><img src="" alt="" /></a>
+      <a class="logo"><img src="" alt="" /></a>
       <header>
         <h2>Vindicatum</h2>
         <p>Premier Raiding Guild</p>
@@ -15,14 +15,16 @@
       <div class="mini-posts">
           {{#if activeStreams}}
             {{#each activeStreams as |stream|}}
-              <a href="#" class="author class">
+              <a class="author class">
                 <img src="class-icons/{{stream.class}}.png" alt="">
                 <a href="{{stream.stream.channel.url}}"> <span class="name">{{stream.playerName}}</span></a>
               </a>
             {{/each}}
           {{else}}
-            <a href="#" class="author class">
-              <a href="https://www.twitch.tv/tanned_priest/profile/highlights"> <span class="name">We're all offline! Check out some highlights</span></a>
+            <a class="author class">
+              <a href="https://www.twitch.tv/tanned_priest/profile/highlights"> 
+                <span class="name">We're all offline! Check out some highlights</span>
+              </a>
             </a>
           {{/if}}
         
