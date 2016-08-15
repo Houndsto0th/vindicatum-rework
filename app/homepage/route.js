@@ -9,7 +9,7 @@ export default Ember.Route.extend({
  async model() {
     let guildStreamers = [{streamKey:'tanned_priest', classId: 5, playerName: 'Tanned'},
                           {streamKey:'houndsto0th_', classId: 6, playerName: 'Houndstooth'},
-                          {streamKey:'facial_sh0tzz', classID: 3, playerName: 'Orionid'},
+                          {streamKey:'orionid_hunter', classID: 3, playerName: 'Orionid'},
                           {streamKey:'draakken', classId: 11, playerName: 'Draakken'},
                           {streamKey:'cedx10', classId: 5, playerName: 'Renray'},
                           {streamKey:'mypantaloonz', classId: 12, playerName: 'Pudders'},
