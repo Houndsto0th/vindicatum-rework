@@ -11,7 +11,7 @@ export default Ember.Route.extend({
                           {streamKey:'houndsto0th_', classId: 6, playerName: 'Houndstooth'},
                           {streamKey:'orionid_hunter', classID: 3, playerName: 'Orionid'},
                           {streamKey:'draakken', classId: 11, playerName: 'Draakken'},
-                          {streamKey:'cedx10', classId: 5, playerName: 'Renray'},
+                          {streamKey:'renray_stream', classId: 5, playerName: 'Renray'},
                           {streamKey:'mypantaloonz', classId: 12, playerName: 'Pudders'},
                           {streamKey:'biometrics1', classId: 3, playerName: 'Zyb'},];
     let activeStreams = [];
