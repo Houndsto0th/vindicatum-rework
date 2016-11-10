@@ -5,6 +5,7 @@ export default Ember.Route.extend({
   vindicatumMembers: Ember.inject.service(),
   liveStreams: Ember.inject.service(),
   homepageBlog: Ember.inject.service(),
+  renewAuth: Ember.inject.service(),
 
  async model() {
     let guildStreamers = [{streamKey:'tanned_priest', classId: 5, playerName: 'Tanned'},
@@ -28,8 +29,9 @@ export default Ember.Route.extend({
       });
 
     }
+    let authToken = await this.get('renewAuth').renewAuthToken.access_token;
 
-    let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum();
+    let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum(authToken);
 
 
     return { activeStreams, imgurAlbum };
