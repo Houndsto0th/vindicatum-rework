@@ -4,22 +4,17 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'vindicatum-rework',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
-    },
-    contentSecurityPolicy: {
-      'default-src': "'self'",
-      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-      'connect-src': "'self' https://us.api.battle.net https://api.twitch.tv/kraken/streams/ https://api.imgur.com/3/album/y0TxV " , // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
-      // 'img-src': "'self' 'unsafe-inline' http://www.google-analytics.com",
-      'style-src': "'self' http://fonts.googleapis.com/", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
-      // 'media-src': "'self'",
-      // 'script-src': "'self' 'unsafe-inline' https://www.fullstory.com http://www.googletagmanager.com http://www.google-analytics.com"
     },
 
     APP: {
@@ -38,7 +33,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter

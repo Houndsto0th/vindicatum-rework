@@ -2,17 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
 
-  renewAuthToken(){
-
-    let renewAuthToken = Ember.$.ajax({
+  async renewAuthToken(){
+    console.log('hi');
+    let authToken = await Ember.$.ajax({
       url: 'https://api.imgur.com/oauth2/token',
-      body: {
-        'client_id' : '077e7c5fb98ccd9',
-        'client_secret' : '0421bab8d04a0b3fdd3817865942ec5ab4e2e05c',
-        'refresh_token' : '5aa0751f6059fc22a0a04fde304810fe562faced',
-        'grant_type' : 'refresh_token'
+      data: {
+        'client_id': '077e7c5fb98ccd9',
+        'client_secret': '0421bab8d04a0b3fdd3817865942ec5ab4e2e05c',
+        'refresh_token': '5aa0751f6059fc22a0a04fde304810fe562faced',
+        'grant_type': 'refresh_token'
       },
       method: 'POST'
     });
-    return renewAuthToken;
+    
+    return authToken.access_token;
+  }
+  
 });

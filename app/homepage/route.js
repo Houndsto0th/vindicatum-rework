@@ -29,7 +29,7 @@ export default Ember.Route.extend({
       });
 
     }
-    let authToken = await this.get('renewAuth').renewAuthToken.access_token;
+    let authToken = await this.get('renewAuth').renewAuthToken();
 
     let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum(authToken);
 
