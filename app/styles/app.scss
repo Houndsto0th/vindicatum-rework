@@ -3001,7 +3001,7 @@
 			height: inherit;
 			line-height: inherit;
 			margin-left: 1.5em;
-			overflow: hidden;
+			overflow: visible;
 			padding-left: 1.5em;
 		}
 
@@ -3255,7 +3255,7 @@
 	}
 
 		#intro .logo:before {
-			
+
 			background-position: top left;
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
