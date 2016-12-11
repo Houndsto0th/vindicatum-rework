@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Service.extend({
 
   async renewAuthToken(){
-    console.log('hi');
     let authToken = await Ember.$.ajax({
       url: 'https://api.imgur.com/oauth2/token',
       data: {
