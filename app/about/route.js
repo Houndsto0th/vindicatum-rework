@@ -18,6 +18,10 @@ export default Ember.Route.extend({
      return { memberData };
 
 
-   }
+   },
+
+   afterModel: function(model) {
+    $(document).attr('title', 'Vindicatum');
+  }
 
 });

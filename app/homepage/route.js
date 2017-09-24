@@ -8,15 +8,17 @@ export default Ember.Route.extend({
   activate() {
     document.title="Vindicatum"
   },
-  
+
  async model() {
-    let guildStreamers = [{streamKey:'tanned_priest', classId: 5, playerName: 'Tanned'},
-                          {streamKey:'orionid_hunter', classId: 3, playerName: 'Orionid'},
-                          {streamKey:'draakken', classId: 11, playerName: 'Draakken'},
+    let guildStreamers = [{streamKey:'royal_nine', classId: 3, playerName: 'Kaeve'},
+                          {streamKey:'thanada1', classId: 11, playerName: 'Thanada'},
+                          {streamKey:'daddy_arrow', classId: 3, playerName: 'Arrow'},
                           {streamKey:'renray_stream', classId: 5, playerName: 'Renray'},
-                          {streamKey:'mypantaloonz', classId: 12, playerName: 'Pudders'},
-                          {streamKey:'biometrics1', classId: 3, playerName: 'Zyb'},];
-    
+                          {streamKey:'mypantaloonz', classId: 11, playerName: 'Pudders'},
+                          {streamKey:'streamwaddle', classId: 9, playerName: 'Waddle'},
+                          {streamKey:'feythe', classId: 3, playerName: 'Braille'},
+                          {streamKey:'zanderdk1', classId: 6, playerName: 'Zanderdk'}];
+
     let authToken = await this.get('renewAuth').renewAuthToken();
 
     let imgurAlbum = await this.get( 'homepageBlog' ).getVindiAlbum(authToken);
@@ -25,5 +27,9 @@ export default Ember.Route.extend({
     return { guildStreamers, imgurAlbum };
 
 
+  },
+
+  afterModel: function(model) {
+    $(document).attr('title', 'Vindicatum');
   }
 });
