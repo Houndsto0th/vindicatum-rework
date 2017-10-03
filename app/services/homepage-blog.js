@@ -7,7 +7,8 @@ export default Ember.Service.extend({
     let userAlbums = Ember.$.ajax({
       url: 'https://api.imgur.com/3/album/y0TxV',
       headers: {
-          'Authorization':`Bearer ${authToken}`
+          'Authorization':`Bearer ${authToken}`,
+          'Access-Control-Allow-Origin': 'http://vindicatum.com'
       },
       method: 'GET'
       });
