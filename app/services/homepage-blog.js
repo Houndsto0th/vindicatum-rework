@@ -8,7 +8,6 @@ export default Ember.Service.extend({
       url: 'https://api.imgur.com/3/album/y0TxV',
       headers: {
           'Authorization':`Bearer ${authToken}`,
-          'Access-Control-Allow-Origin': 'http://vindicatum.com'
       },
       method: 'GET'
       });
