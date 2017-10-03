@@ -6,7 +6,6 @@ export default Ember.Service.extend({
     let authToken = await Ember.$.ajax({
       url: 'https://api.imgur.com/oauth2/token',
       data: {
-        'content-type': 'multipart/form-data',
         'client_id': '077e7c5fb98ccd9',
         'client_secret': '0421bab8d04a0b3fdd3817865942ec5ab4e2e05c',
         'refresh_token': '5aa0751f6059fc22a0a04fde304810fe562faced',
@@ -14,7 +13,7 @@ export default Ember.Service.extend({
       },
       method: 'POST'
     });
-    
+    console.log(authToken, 'hi')
     return authToken.access_token;
   }
   
