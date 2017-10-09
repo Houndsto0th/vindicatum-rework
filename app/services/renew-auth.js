@@ -13,7 +13,6 @@ export default Ember.Service.extend({
       },
       method: 'POST'
     });
-    console.log(authToken, 'hi')
     return authToken.access_token;
   }
   
